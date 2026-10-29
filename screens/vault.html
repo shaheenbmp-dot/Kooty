@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vault · Kooty</title>
+<meta name="theme-color" content="#FCF8EE">
+<link rel="icon" href="../assets/kooty-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&amp;family=Baloo+Chettan+2:wght@600;700&amp;family=Nunito:wght@400;600;700;800&amp;display=swap">
+<link rel="stylesheet" href="../css/kooty.css">
+<script src="../js/kooty.js" defer></script>
+</head>
+<body data-page="vault">
+<div class="app">
+<main class="screen screen--tight">
+<header class="topbar">
+<div class="stack gap-2">
+<h1 class="h-page">Vault</h1>
+<span class="vault-lock"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Locked with your fingerprint</span>
+</div>
+<button class="icon-btn" type="button" aria-label="Search the vault"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></button>
+</header>
+
+<button class="scan-btn" type="button">
+<span class="scan-btn__icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></span>
+<span class="stack gap-2"><span class="scan-btn__title">Scan a receipt</span><span class="scan-btn__sub">Kooty reads the dates and sets reminders</span></span>
+</button>
+
+<div class="segmented" role="tablist" aria-label="Vault sections">
+<button class="segmented__btn" type="button" role="tab" id="tab-warranty" aria-selected="true" aria-controls="panel-warranty">Warranties</button>
+<button class="segmented__btn" type="button" role="tab" id="tab-docs" aria-selected="false" aria-controls="panel-docs" tabindex="-1">Documents</button>
+<button class="segmented__btn" type="button" role="tab" id="tab-receipts" aria-selected="false" aria-controls="panel-receipts" tabindex="-1">Receipts</button>
+</div>
+
+<div class="panel stack" style="gap:14px" id="panel-warranty" role="tabpanel" aria-labelledby="tab-warranty">
+<section class="card card--alert card--stack" style="gap:10px;padding:14px 16px" aria-labelledby="soon-title">
+<span class="eyebrow" style="font-size:12px;letter-spacing:.04em;color:var(--amber-ink)">Expiring soon</span>
+<div style="display:flex;gap:12px;align-items:center">
+<span class="bubble bubble--square bubble--white"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg></span>
+<div class="stack gap-2"><h2 id="soon-title" class="row__title" style="font-size:16px;color:var(--amber-deep)">Air conditioner</h2><span class="text-14" style="color:var(--amber-ink)">Warranty ends Wed 28 Oct, in 9 days</span></div>
+</div>
+<a class="btn btn--primary btn--block" href="services.html">Book a free service check</a>
+</section>
+<ul class="card card--flush rows">
+<li class="row "><span class="bubble bubble--sm bubble--square "><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="row__body" style="gap:4px"><span class="vault-item__top"><span class="row__title">Refrigerator</span><span class="vault-item__left">1 yr 4 mo left</span></span><span class="row__sub">Bought 12 Feb 2025 · 3 yr warranty</span><span class="progress progress--sm" aria-hidden="true"><span class="progress__bar" style="width:45%"></span></span></span></li>
+<li class="row "><span class="bubble bubble--sm bubble--square "><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="row__body" style="gap:4px"><span class="vault-item__top"><span class="row__title">Washing machine</span><span class="vault-item__left">2 yrs left</span></span><span class="row__sub">Bought 3 Nov 2024 · 4 yr warranty</span><span class="progress progress--sm" aria-hidden="true"><span class="progress__bar" style="width:50%"></span></span></span></li>
+<li class="row "><span class="bubble bubble--sm bubble--square "><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="row__body" style="gap:4px"><span class="vault-item__top"><span class="row__title">Mobile phone</span><span class="vault-item__left">5 mo left</span></span><span class="row__sub">Bought 20 Mar 2026 · 1 yr warranty</span><span class="progress progress--sm" aria-hidden="true"><span class="progress__bar" style="width:42%"></span></span></span></li>
+<li class="row vault-item--off"><span class="bubble bubble--sm bubble--square bubble--sand"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="row__body" style="gap:4px"><span class="vault-item__top"><span class="row__title">Mixer grinder</span><span class="vault-item__left">Expired</span></span><span class="row__sub">Ended 2 Aug 2026</span></span></li>
+</ul>
+</div>
+<div class="panel" id="panel-docs" role="tabpanel" aria-labelledby="tab-docs" hidden>
+<ul class="card card--flush rows">
+<li class="row vault-item--neutral"><span class="bubble bubble--sm bubble--square bubble--teal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg></span><span class="row__body" style="gap:4px"><span class="vault-item__top"><span class="row__title">Driving licence</span><span class="vault-item__left">Valid</span></span><span class="row__sub">Renew in 2031</span></span></li>
+<li class="row vault-item--neutral"><span class="bubble bubble--sm bubble--square bubble--teal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg></span><span class="row__body" style="gap:4px"><span class="vault-item__top"><span class="row__title">Home insurance</span><span class="vault-item__left">12 Jan 2027</span></span><span class="row__sub">Renewal reminder set</span></span></li>
+<li class="row vault-item--neutral"><span class="bubble bubble--sm bubble--square bubble--teal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg></span><span class="row__body" style="gap:4px"><span class="vault-item__top"><span class="row__title">Gas connection book</span><span class="vault-item__left">Saved</span></span><span class="row__sub">Indane · consumer no. hidden</span></span></li>
+<li class="row vault-item--soon"><span class="bubble bubble--sm bubble--square bubble--sand"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg></span><span class="row__body" style="gap:4px"><span class="vault-item__top"><span class="row__title">Vehicle papers</span><span class="vault-item__left">Coming soon</span></span><span class="row__sub">Arrives with the Vehicle update</span></span></li>
+</ul>
+</div>
+<div class="panel" id="panel-receipts" role="tabpanel" aria-labelledby="tab-receipts" hidden>
+<ul class="card card--flush rows">
+<li class="row vault-item--neutral"><span class="bubble bubble--sm bubble--square bubble--amber-tint"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8H8M16 12H8M13 16H8"/></svg></span><span class="row__body" style="gap:4px"><span class="vault-item__top"><span class="row__title">Ceiling fan</span><span class="vault-item__left">₹2,450</span></span><span class="row__sub">3 Oct 2026 · linked to warranty</span></span></li>
+<li class="row vault-item--neutral"><span class="bubble bubble--sm bubble--square bubble--amber-tint"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8H8M16 12H8M13 16H8"/></svg></span><span class="row__body" style="gap:4px"><span class="vault-item__top"><span class="row__title">Inverter battery</span><span class="vault-item__left">₹11,800</span></span><span class="row__sub">18 Sep 2026 · linked to warranty</span></span></li>
+<li class="row vault-item--neutral"><span class="bubble bubble--sm bubble--square bubble--amber-tint"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8H8M16 12H8M13 16H8"/></svg></span><span class="row__body" style="gap:4px"><span class="vault-item__top"><span class="row__title">Electrician visit</span><span class="vault-item__left">₹300</span></span><span class="row__sub">2 Sep 2026 · booked on Kooty</span></span></li>
+<li class="row vault-item--neutral"><span class="bubble bubble--sm bubble--square bubble--amber-tint"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8H8M16 12H8M13 16H8"/></svg></span><span class="row__body" style="gap:4px"><span class="vault-item__top"><span class="row__title">School uniform</span><span class="vault-item__left">₹1,640</span></span><span class="row__sub">28 Aug 2026</span></span></li>
+</ul>
+</div>
+
+<p class="vault-lock"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Encrypted, and never used for ads.</p>
+</main>
+<nav class="tabbar" aria-label="Main">
+<a class="tabbar__link" href="today.html"><span class="tabbar__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span>Today</a>
+<a class="tabbar__link" href="home.html"><span class="tabbar__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 10.5 12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-7h-6v7H4a1 1 0 0 1-1-1z"/></svg></span>Home</a>
+<a class="tabbar__link" href="services.html"><span class="tabbar__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Services</a>
+<a class="tabbar__link" href="groups.html"><span class="tabbar__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Groups</a>
+<a class="tabbar__link" href="vault.html" aria-current="page"><span class="tabbar__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Vault</a>
+</nav>
+</div>
+</body>
+</html>
